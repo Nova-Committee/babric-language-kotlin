@@ -70,9 +70,15 @@ publishing {
 
     // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
     repositories {
-        // Add repositories to publish to here.
-        // Notice: This block does NOT have the same function as the block in the top level.
-        // The repositories here will be used for publishing your artifact, not for
-        // retrieving dependencies.
+        maven {
+            name = "cloudsmith"
+            url = "https://maven.cloudsmith.io/nova-committee/babriclanguagekotlin/"
+            credentials {
+                def envUsername = System.getenv("CLOUDSMITH_USER")
+                def envPassword = System.getenv("CLOUDSMITH_KEY")
+                username = envUsername == null ? findProperty("CLOUDSMITH_USER") : envUsername
+                password = envPassword == null ? findProperty("CLOUDSMITH_KEY") : envPassword
+            }
+        }
     }
 }
