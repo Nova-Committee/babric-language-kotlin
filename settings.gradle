@@ -1,0 +1,21 @@
+pluginManagement {
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+        maven {
+            name = 'Fabric'
+            url = 'https://maven.fabricmc.net/'
+        }
+        maven {
+            name = 'Babric'
+            url = 'https://maven.glass-launcher.net/babric'
+        }
+        mavenCentral()
+        gradlePluginPortal()
+    }
+
+    plugins {
+        id "org.jetbrains.kotlin.jvm" version kotlin_version
+    }
+}

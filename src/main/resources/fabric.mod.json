@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "id": "babric-language-kotlin",
+  "version": "${version}",
+  "name": "Babric Language Kotlin",
+  "description": "Babric language module for Kotlin.",
+  "authors": [
+    "pkstDev"
+  ],
+  "languageAdapters": {
+    "kotlin": "committee.nova.babriclanguagekotlin.KotlinAdapter"
+  },
+  "license": "Apache-2.0",
+  "icon": "assets/babric-language-kotlin/icon500.png"
+}
